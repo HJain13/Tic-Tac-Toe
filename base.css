@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 32px;	
+}
+
+.container {
+	width: 100%;
+}
+
+#tttArea{
+	width: 542px;
+	height: 542px;
+	margin: 60px auto;
+}
+
+div[id*="ib"] {
+	width: 180px;
+	height: 180px;
+	position: absolute;
+}
+
+#ib1 {
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+}
+
+#ib2 {
+	margin-left:181px;
+}
+
+#ib3 {
+	border-left: 1px solid #888;
+	border-bottom: 1px solid #888;
+	margin: 0 0 360px 361px;
+}
+
+#ib4 {
+	margin-top: 181px;
+}
+
+#ib5 {
+	border: 1px solid #888;
+	margin: 180px 0 0 180px;
+}
+
+#ib6 {
+	margin: 181px 0 0 361px;
+}
+
+#ib7 {
+	border-top: 1px solid #888;
+	border-right: 1px solid #888;
+	margin: 361px 360px 0 0;
+}
+
+#ib8 {
+	margin: 361px 0 0 181px;
+}
+
+#ib9 {
+	border-top: 1px solid #888;
+	border-left: 1px solid #888;
+	margin: 361px 0 0 361px; 
+}
+
+.cross {
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	margin-left: 93px;
+	margin-top: 23px;
+	opacity: 1;
+}
+
+.cross:before,
+.cross:after {
+	position: absolute;
+	content: ' ';
+	height: 141px;
+	width: 3px;
+	background-color: #333;
+}
+
+.cross:before {
+	transform: rotate(45deg);
+}
+
+.cross:after {
+	transform: rotate(-45deg);
+}
+
+.crossE {
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	margin-left: 93px;
+	margin-top: 23px;
+	opacity: 1;
+}
+
+.crossE:before,
+.crossE:after {
+	position: absolute;
+	content: ' ';
+	height: 141px;
+	width: 3px;
+	background-color: #0dd;
+}
+
+.crossE:before {
+	transform: rotate(45deg);
+}
+
+.crossE:after {
+	transform: rotate(-45deg);
+}
+
+.circle {
+	position: absolute;
+    height: 110px;
+    width: 110px;
+	margin: 35px 35px;
+    background-color: transparent;
+    border: 3px solid #333;
+	border-radius:50%;
+}
+
+div[id^="cr"] {
+	display: none;
+}
+
+div[id^="ci"] {
+	display: none;
+}
+
+.player {
+	width: 180px;
+	height: 40px;
+	text-align: center;
+	background-color: #000;
+	opacity: 0.2;
+	border-radius: 10px;
+	float: right;
+	color: white;
+	padding: 10px;
+}
+
+#p1 {
+	opacity: 1.0;
+	float: left;
+}
+
+#status {
+	padding-top: 10px; 
+	width: 250px;
+	height: 60px;
+	margin: 0 auto;
+	text-align: center;
+}
