@@ -1,6 +1,6 @@
 	var x = 'Player 2';
 	var placed = ['','','','','','','','','',''];
-	var gOver = 0;
+	var gOver = 0, score1 = 0, score2 = 0;
 
 	function place(i) {
 		if (gOver != 1){
@@ -49,6 +49,14 @@
 
 function declare(x){
     document.getElementById("status").innerHTML = x + " Wins!";
+	if (x == 'Player 1') {
+		score1++;
+    	document.getElementById("sp1").innerHTML = score1;		
+	}
+	else {
+		score2++;
+    	document.getElementById("sp2").innerHTML = score2;			
+	}
     gOver = 1;
 	document.getElementById("p1").style.opacity='0.2';
 	document.getElementById("p2").style.opacity='0.2';	
@@ -71,7 +79,7 @@ function checkTie(){
 }
 
 function enhance(a,b,c,x){
-	if (x == 'Player 1') {
+	if (x == 'Player 1') {		
 		document.getElementById('cr'+a).setAttribute("class", "crossE");
 		document.getElementById('cr'+b).setAttribute("class", "crossE");
 		document.getElementById('cr'+c).setAttribute("class", "crossE");
@@ -81,4 +89,17 @@ function enhance(a,b,c,x){
 		document.getElementById('ci'+b).style.borderColor="#0dd";
 		document.getElementById('ci'+c).style.borderColor="#0dd";
 	}
+}
+
+function reset(){
+	placed[0]='';
+	for (var i = 1; i<=9; i++){
+		document.getElementById("cr"+i).style.display='none';
+		document.getElementById('ci'+i).style.display='none';	
+		document.getElementById('cr'+i).setAttribute("class", "cross");
+		document.getElementById('ci'+i).style.borderColor="#333";
+		placed[i]='';	
+	}
+	gOver = 0;
+    document.getElementById("status").innerHTML = "Tic`Tac`Toe";	
 }
