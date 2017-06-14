@@ -1,66 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="basic-grid.css">
 	<link rel="stylesheet" href="base.css">
 	<title>Tic`Tac`Toe</title>
 </head>
+
 <body>
 	<div class="container">
-		<div class="score1">
-			<div class="player" id="p1">Player 1</div>
-			<div class="sp" id="sp1">0</div>
+		<div class="row center">
+			<div class="col-2-sm hidden-lg"></div>
+			<div class="col-2 hidden-sm sboard">
+				<div class="score1">
+					<div class="player" id="p1">Player 1</div>
+					<div class="sp" id="sp1">0</div>
+				</div>
+			</div>
+			<div class="col-8 col-8-sm" id="status"><h1>Tic`Tac`Toe</h1></div>
+			<div class="col-2 hidden-sm sboard">
+				<div class="score2">
+					<div class="player" id="p2">Player 2</div>
+					<div class="sp" id="sp2">0</div>			
+				</div>
+			</div>			
+			<div class="col-2-sm hidden-lg"></div>		
 		</div>
-		<div class="score2">
-			<div class="player" id="p2">Player 2</div>
-			<div class="sp" id="sp2">0</div>			
-		</div>
-		<div id="status">Tic`Tac`Toe</div>
-		<div class="btn" id="rst" onclick="reset()">Reset</div>		
 	</div>
+	<br>
 	<div class="container">
-		<div id="tttArea">
-			<div id="ib1" onclick="place('1')">
-				<div class="circle" id="ci1"></div>
-				<div class="cross" id="cr1"></div>
+		<div class="row">
+			<div class="col-3 col-1-sm"></div>
+			<div class="col-6 col-10-sm">
+				<div class="row">
+					<div class="col-4-sm boxed hd-bt hd-bl" onclick="place(1)">
+						<div class="circle" id="ci1"></div>
+						<div class="cross" id="cr1"></div>					
+					</div>
+					<div class="col-4-sm boxed hd-bt" onclick="place(2)">
+						<div class="circle" id="ci2"></div>
+						<div class="cross" id="cr2"></div>		
+					</div>
+					<div class="col-4-sm boxed hd-bt hd-br" onclick="place('3')">
+						<div class="circle" id="ci3"></div>
+						<div class="cross" id="cr3"></div>								
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4-sm boxed hd-bl" onclick="place('4')">
+						<div class="circle" id="ci4"></div>
+						<div class="cross" id="cr4"></div>								
+					</div>
+					<div class="col-4-sm boxed" onclick="place('5')">
+						<div class="circle" id="ci5"></div>
+						<div class="cross" id="cr5"></div>								
+					</div>
+					<div class="col-4-sm boxed hd-br" onclick="place('6')">
+						<div class="circle" id="ci6"></div>
+						<div class="cross" id="cr6"></div>								
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4-sm boxed hd-bb hd-bl" onclick="place('7')">
+						<div class="circle" id="ci7"></div>
+						<div class="cross" id="cr7"></div>								
+					</div>
+					<div class="col-4-sm boxed hd-bb" onclick="place('8')">
+						<div class="circle" id="ci8"></div>
+						<div class="cross" id="cr8"></div>								
+					</div>
+					<div class="col-4-sm boxed hd-bb hd-br" onclick="place('9')">
+						<div class="circle" id="ci9"></div>
+						<div class="cross" id="cr9"></div>								
+					</div>
+				</div>                    
 			</div>
-			<div id="ib2" onclick="place('2')">
-				<div class="circle" id="ci2"></div>
-				<div class="cross" id="cr2"></div>
-			</div>
-			<div id="ib3" onclick="place('3')">
-				<div class="circle" id="ci3"></div>
-				<div class="cross" id="cr3"></div>
-			</div>
-			<div id="ib4" onclick="place('4')">
-				<div class="circle" id="ci4"></div>
-				<div class="cross" id="cr4"></div>
-			</div>
-			<div id="ib5" onclick="place('5')">
-				<div class="circle" id="ci5"></div>
-				<div class="cross" id="cr5"></div>
-			</div>
-			<div id="ib6" onclick="place('6')">
-				<div class="circle" id="ci6"></div>
-				<div class="cross" id="cr6"></div>
-			</div>
-			<div id="ib7" onclick="place('7')">
-				<div class="circle" id="ci7"></div>
-				<div class="cross" id="cr7"></div>
-			</div>
-			<div id="ib8" onclick="place('8')">
-				<div class="circle" id="ci8"></div>
-				<div class="cross" id="cr8"></div>
-			</div>
-			<div id="ib9" onclick="place('9')">
-				<div class="circle" id="ci9"></div>
-				<div class="cross" id="cr9"></div>
-			</div>
+			<div class="col-3 col-1-sm"></div>			        
 		</div>
 	</div>
-	<script src="ttt.js"></script>
-
+	<div class="btn" id="rst" onclick="reset()">Reset</div>		
+	<script src="ttt.js"></script>	
 </body>
+
 </html>
