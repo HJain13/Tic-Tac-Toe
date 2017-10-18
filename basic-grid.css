@@ -87,9 +87,17 @@ p {
   margin-right: auto;
 }
 
+.score-on-sm {
+  display: block;
+}
+
 @media only screen and (min-width: 33.75em) {
   .container {
     width: 80%;
+  }
+  .score1,
+  .score2 {
+    width: 150px;
   }
 }
 
@@ -221,6 +229,9 @@ p {
     display: block;
   }
   .hidden-lg {
+    display: none;
+  }
+  .score-on-sm {
     display: none;
   }
 }
