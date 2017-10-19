@@ -133,6 +133,24 @@ div[id^="ci"] {
 	font-size: 1.5em;	
 }
 
+.score-on-sm .player {
+  border-radius: 10px;
+}
+
+.player span {
+	color: #fff;
+}
+
+.score-on-sm .score1, .score-on-sm .score2 {
+  border-bottom: none;
+  width: auto;
+  font-size: 12px;
+}
+
+.score-on-sm .player-2 {
+  float: right !important;
+}
+
 #p2 {
 	opacity: 0.2;
 }
