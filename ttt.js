@@ -49,7 +49,7 @@ function place(i) {
 }
 
 function declare(x) {
-	document.getElementById("status").innerHTML = "<h1>" + x + " Wins!</h1>";
+	document.getElementById("status").innerHTML = "<h1>" + x + " Wins!</h1><div class='playAgainbtn' id='rst' onClick='resetBoard()'><h2>Play Again</h2></div>";
 	if (x == 'Player 1') {
     score1++;
 		document.getElementById("sp1").innerHTML = score1;		
@@ -75,7 +75,7 @@ function checkTie() {
 		}
 	}
 	if (flag == 0) {
-		document.getElementById("status").innerHTML = "<h1>It's A Draw</h1>";
+		document.getElementById("status").innerHTML = "<h1>It's A Draw</h1><div class='playAgainbtn' id='rst' onClick='resetBoard()'><h2>Play Again</h2></div>";
 		gOver = 1;
 		document.getElementById("p1").style.opacity = '0.2';
 		document.getElementById("p2").style.opacity = '0.2';
