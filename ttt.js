@@ -51,12 +51,14 @@ function place(i) {
 function declare(x) {
 	document.getElementById("status").innerHTML = "<h1>" + x + " Wins!</h1>";
 	if (x == 'Player 1') {
-		score1++;
+    score1++;
 		document.getElementById("sp1").innerHTML = score1;		
+    document.getElementById("mob-sp1").innerHTML = score1;		
 	}
 	else {
-		score2++;
+    score2++;
 		document.getElementById("sp2").innerHTML = score2;			
+    document.getElementById("mob-sp2").innerHTML = score2;			
 	}
 	document.getElementById("p1").style.opacity='0.2';
 	document.getElementById("p2").style.opacity='0.2';	
