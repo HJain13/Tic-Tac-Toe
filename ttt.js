@@ -51,16 +51,24 @@ function place(i) {
 function declare(x) {
 	document.getElementById("status").innerHTML = "<h1>" + x + " Wins!</h1>";
 	if (x == 'Player 1') {
-		score1++;
-		document.getElementById("sp1").innerHTML = score1;		
+		updateWinCount("sp1",score1);
 	}
 	else {
 		score2++;
-		document.getElementById("sp2").innerHTML = score2;			
+		updateWinCount("sp2",score2);
 	}
 	document.getElementById("p1").style.opacity='0.2';
 	document.getElementById("p2").style.opacity='0.2';	
 	gOver = 1;
+}
+
+function updateWinCount(classSelector, score){
+	score++;
+	var elements = document.getElementsByClassName(classSelector);
+	for(var i = 0; i < elements.length ; i++ ){
+		elements[i].innerHTML = score;
+	}
+
 }
 
 
