@@ -95,7 +95,7 @@ function enhance(a, b, c, x) {
 	}
 }
 
-function reset() {
+function resetBoard() {
 	placed[0] = '';
 	for (var i = 1; i <= 9; i++) {
 		document.getElementById("cr" + i).style.display = 'none';
@@ -106,4 +106,11 @@ function reset() {
 	}
 	gOver = 0;
 	document.getElementById("status").innerHTML = "<h1>Tic`Tac`Toe</h1>";
+}
+
+function resetScore() {
+	score1 = 0;
+    document.getElementById("sp1").innerHTML = score1;
+    score2 = 0;
+    document.getElementById("sp2").innerHTML = score2;
 }
